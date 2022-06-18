@@ -18,7 +18,8 @@ export class RESTAPIServiceService {
   }
 
   public getMsg() {
-    let url = 'https://melstolit-dargox-wqwrxp4f97qv-3000.githubpreview.dev/api/getMsg';
+    //let url = 'https://localhost:3000/api/getMsg';
+    let url = "https://melstolit-dargox-wqwrxp4f97qv-3000.githubpreview.dev/api/getMsg";
     return this.http.get(url);
   }
   

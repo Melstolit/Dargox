@@ -10,10 +10,12 @@ export class BackmsgComponent implements OnInit {
 
   constructor(private apiService: RESTAPIServiceService) { }
 
+  mmsg = "empty";
+
   ngOnInit(): void {
-    console.log("SDFGFDSGSDFGSDF");
+    this.mmsg = "Getting messages...";
     this.apiService.getMsg().subscribe((data) => {
-      console.log(data);
+      this.mmsg = data.toString();
     });
   }
 
